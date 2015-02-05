@@ -1,0 +1,16 @@
+
+*.DS_Store
+*/.DS_Store
+._*
+# Packages
+bin
+.idea
+
+#static content
+.sass-cache
+*.css.map
+
+# auto-generated files
+.logs
+
+
