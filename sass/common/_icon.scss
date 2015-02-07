@@ -1,0 +1,41 @@
+@font-face {
+	font-family: 'codecave';
+	src:url('../fonts/codecave.eot?-5vxnnk');
+	src:url('../fonts/codecave.eot?#iefix-5vxnnk') format('embedded-opentype'),
+		url('../fonts/codecave.woff?-5vxnnk') format('woff'),
+		url('../fonts/codecave.ttf?-5vxnnk') format('truetype'),
+		url('../fonts/codecave.svg?-5vxnnk#codecave') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="codecave-"], [class*=" codecave-"] {
+	font-family: 'codecave';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.codecave-camera:before {
+	content: "\e600";
+}
+
+.codecave-briefcase:before {
+	content: "\e601";
+}
+
+.codecave-home:before {
+	content: "\e602";
+}
+
+.codecave-envelope:before {
+	content: "\e603";
+}
+
