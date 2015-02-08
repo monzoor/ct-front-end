@@ -1,0 +1,53 @@
+// Font color extend
+
+// Black
+%color__font--black { color: $black; }
+%color__font--black__opacity--Point8 { color: rgba($black,.8);}
+%color__font--black__opacity--Point5 { color: rgba($black,.5);}
+
+// White
+%color__font--white { color: $white; }
+
+// Gray
+%color__font--semi-dark-gray { color: $semi-dark-gray; }
+
+// Green
+%color__font--done-green { color: $done-green; }
+
+// red
+%color__font--error-red { color: $error-red; }
+
+// Blue
+%color__font--link-blue { color: $link-blue; }
+
+// Brand color
+%color__font--facebook { color: $facebook; }
+%color__font--twitter { color: $twitter; }
+%color__font--google { color: $google; }
+%color__font--odesk { color: $odesk; }
+%color__font--elance { color: $elance; }
+
+/****************************************************************************/
+
+// Background color extend
+
+// white
+%color__background--white { background-color: $white; }
+
+// blue
+%color__background--blue { background-color: $blue; }
+
+// Gray
+%color__background--light-gray { background-color: $light-gray; }
+
+
+// Grid
+%center{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+

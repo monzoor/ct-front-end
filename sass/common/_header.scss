@@ -1,0 +1,60 @@
+/*  Syntax Quick Reference
+  --------------------------
+  column($ratios: 1, $offset: 0, $cycle: 0, $uncycle: 0, $gutter: $jeet-gutter)
+  span($ratio: 1, $offset: 0)
+  shift($ratios: 0, $col_or_span: column, $gutter: $jeet-gutter)
+  unshift()
+  edit()
+  center($max_width: 1410px, $pad: 0)
+  stack($pad: 0, $align: false)
+  unstack()
+  align($direction: both)
+  cf()
+*/
+
+header{
+  @include stack();
+  @extend %color__background--blue;
+  height: 96px;
+}
+.header--container{
+  height: 100%;
+  @include center(940px);
+  .nav__logo--container {
+    @include span(1);
+    display: block;
+    margin: 30px 0 0 0;
+  }
+  nav{
+    @include span(1);
+    margin-top: 15px;
+    li{
+      float: left;
+      text-align: center;
+      margin-right: 30px;
+      @extend %font__margin--TopBottom0;
+      &:last-child{
+        float: right;
+        margin-right: 0;
+      }
+      &:first-child{
+        a{
+          padding-left: 0;
+        }
+      }
+    }
+    a{
+      padding: 0 12px 6px;
+      display: block;
+      @extend %color__font--white;
+      @include transition(all .2s);
+      &.selected{
+        border-bottom: 2px solid $yellow;
+      }
+      &:hover{
+        color: rgba($white,.5);
+      }
+    }
+  }
+}
+

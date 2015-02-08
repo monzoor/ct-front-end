@@ -26,6 +26,7 @@ p{
 	// @include leader(1);
 	@include trailer(1);
 }
+%font__margin--TopBottom0 { @include adjust-font-size-to(14px); }
 blockquote {
 	@include adjust-font-size-to(26px);
 }

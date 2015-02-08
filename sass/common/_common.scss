@@ -2,20 +2,18 @@
 body{
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	// background-color: $brand-color;
-	color: $brand-color2;
 	@include font($source-sans-pro);
+	// @extend %color__background--light-gray;
 }
 * a{
 	text-decoration: none;
-	color: $brand-color2;
+}
+img {
+	display: block;
 }
 
-%center{
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	margin: auto;
-}
+// Float element
+
+.float--right{ float: right; }
+.float--left { float: left; }
+.float--none { float: none; }

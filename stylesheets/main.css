@@ -201,15 +201,171 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #231f20;
   font-family: "Source Sans Pro", sans-serif;
   font-style: normal;
 }
 
-/* line 9, ../sass/common/_common.scss */
+/* line 8, ../sass/common/_common.scss */
 * a {
   text-decoration: none;
-  color: #231f20;
+}
+
+/* line 11, ../sass/common/_common.scss */
+img {
+  display: block;
+}
+
+/* line 17, ../sass/common/_common.scss */
+.float--right {
+  float: right;
+}
+
+/* line 18, ../sass/common/_common.scss */
+.float--left {
+  float: left;
+}
+
+/* line 19, ../sass/common/_common.scss */
+.float--none {
+  float: none;
+}
+
+/* line 9, ../sass/common/_extends.scss */
+.header--container nav a {
+  color: #FFFFFF;
+}
+
+/****************************************************************************/
+/* line 38, ../sass/common/_extends.scss */
+header {
+  background-color: #0288d1;
+}
+
+/*  Syntax Quick Reference
+  --------------------------
+  column($ratios: 1, $offset: 0, $cycle: 0, $uncycle: 0, $gutter: $jeet-gutter)
+  span($ratio: 1, $offset: 0)
+  shift($ratios: 0, $col_or_span: column, $gutter: $jeet-gutter)
+  unshift()
+  edit()
+  center($max_width: 1410px, $pad: 0)
+  stack($pad: 0, $align: false)
+  unstack()
+  align($direction: both)
+  cf()
+*/
+/* line 15, ../sass/common/_header.scss */
+header {
+  display: block;
+  clear: both;
+  float: none;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 96px;
+}
+/* line 265, ../sass/vendor/jeet/_grid.scss */
+header:first-child {
+  margin-left: auto;
+}
+/* line 269, ../sass/vendor/jeet/_grid.scss */
+header:last-child {
+  margin-right: auto;
+}
+
+/* line 20, ../sass/common/_header.scss */
+.header--container {
+  height: 100%;
+  *zoom: 1;
+  width: auto;
+  max-width: 940px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+/* line 344, ../sass/vendor/jeet/_grid.scss */
+.header--container:before, .header--container:after {
+  content: '';
+  display: table;
+}
+/* line 349, ../sass/vendor/jeet/_grid.scss */
+.header--container:after {
+  clear: both;
+}
+/* line 23, ../sass/common/_header.scss */
+.header--container .nav__logo--container {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+  display: block;
+  margin: 30px 0 0 0;
+}
+/* line 344, ../sass/vendor/jeet/_grid.scss */
+.header--container .nav__logo--container:before, .header--container .nav__logo--container:after {
+  content: '';
+  display: table;
+}
+/* line 349, ../sass/vendor/jeet/_grid.scss */
+.header--container .nav__logo--container:after {
+  clear: both;
+}
+/* line 28, ../sass/common/_header.scss */
+.header--container nav {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+  margin-top: 15px;
+}
+/* line 344, ../sass/vendor/jeet/_grid.scss */
+.header--container nav:before, .header--container nav:after {
+  content: '';
+  display: table;
+}
+/* line 349, ../sass/vendor/jeet/_grid.scss */
+.header--container nav:after {
+  clear: both;
+}
+/* line 31, ../sass/common/_header.scss */
+.header--container nav li {
+  float: left;
+  text-align: center;
+  margin-right: 30px;
+}
+/* line 36, ../sass/common/_header.scss */
+.header--container nav li:last-child {
+  float: right;
+  margin-right: 0;
+}
+/* line 41, ../sass/common/_header.scss */
+.header--container nav li:first-child a {
+  padding-left: 0;
+}
+/* line 46, ../sass/common/_header.scss */
+.header--container nav a {
+  padding: 0 12px 6px;
+  display: block;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+}
+/* line 51, ../sass/common/_header.scss */
+.header--container nav a.selected {
+  border-bottom: 2px solid #FFC107;
+}
+/* line 54, ../sass/common/_header.scss */
+.header--container nav a:hover {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 @font-face {
@@ -256,11 +412,11 @@ body {
 /* Sass Mixin that generates a Baseline Grid */
 /* by: Mike Morrison, Soholaunch.com */
 /* You don't have to leave this credit comment in, but it would be nice of you. */
-/* line 29, ../sass/common/_local-settings.scss */
+/* line 30, ../sass/common/_local-settings.scss */
 body {
-  background-image: -webkit-linear-gradient(0deg, rgba(200, 0, 0, 0.2) 60px, transparent 20px), -webkit-linear-gradient(top, transparent 95%, rgba(56, 255, 255, 0.8) 100%);
-  background-image: -moz-linear-gradient(0deg, rgba(200, 0, 0, 0.2) 60px, transparent 20px), -moz-linear-gradient(top, transparent 95%, rgba(56, 255, 255, 0.8) 100%);
-  background-image: -o-linear-gradient(0deg, rgba(200, 0, 0, 0.2) 60px, transparent 20px), -o-linear-gradient(top, transparent 95%, rgba(56, 255, 255, 0.8) 100%);
+  background-image: -webkit-linear-gradient(0deg, rgba(200, 0, 0, 0.2) 60px, transparent 20px), -webkit-linear-gradient(top, transparent 95%, #38ffff 100%);
+  background-image: -moz-linear-gradient(0deg, rgba(200, 0, 0, 0.2) 60px, transparent 20px), -moz-linear-gradient(top, transparent 95%, #38ffff 100%);
+  background-image: -o-linear-gradient(0deg, rgba(200, 0, 0, 0.2) 60px, transparent 20px), -o-linear-gradient(top, transparent 95%, #38ffff 100%);
   background-size: 80px 100%, 100% 16px;
   background-position: 10px 0px;
 }
@@ -315,6 +471,12 @@ p {
 }
 
 /* line 29, ../sass/common/_typography.scss */
+.header--container nav li {
+  font-size: 1em;
+  line-height: 1.71429em;
+}
+
+/* line 30, ../sass/common/_typography.scss */
 blockquote {
   font-size: 1.85714em;
   line-height: 1.84615em;
