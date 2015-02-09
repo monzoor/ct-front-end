@@ -3,17 +3,44 @@ body{
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	@include font($source-sans-pro);
-	// @extend %color__background--light-gray;
+	@extend %color__background--light-gray;
 }
 * a{
 	text-decoration: none;
+	@extend %color__font--link-blue;
 }
 img {
 	display: block;
 }
-
+// Font decoration 
+.underline { text-decoration: underline}
 // Float element
 
 .float--right{ float: right; }
 .float--left { float: left; }
 .float--none { float: none; }
+
+// Font align
+
+.font__align--center { text-align: center}
+.font__align--left { text-align: left}
+.font__align--right { text-align: right}
+
+// font weight
+.font__weight--200 { font-weight: 200 }
+.font__weight--400 { font-weight: 400 }
+.font__weight--600 { font-weight: 600 }
+.font__weight--700 { font-weight: 700 }
+
+// Margin 
+.margin__bottom--0{ margin-bottom: 0px}
+.margin__bottom--6{ margin-bottom: 6px}
+.margin__bottom--12{ margin-bottom: 12px}
+.margin__bottom--18{ margin-bottom: 18px}
+.margin__bottom--24{ margin-bottom: 24px}
+
+.margin__top--0{ margin-top: 0px}
+.margin__top--6{ margin-top: 6px}
+.margin__top--12{ margin-top: 12px}
+.margin__top--18{ margin-top: 18px}
+.margin__top--24{ margin-top: 24px}

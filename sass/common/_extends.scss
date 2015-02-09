@@ -5,22 +5,17 @@
 %color__font--black__opacity--Point8 { color: rgba($black,.8);}
 %color__font--black__opacity--Point5 { color: rgba($black,.5);}
 
-// White
 %color__font--white { color: $white; }
 
-// Gray
 %color__font--semi-dark-gray { color: $semi-dark-gray; }
 
-// Green
 %color__font--done-green { color: $done-green; }
 
-// red
 %color__font--error-red { color: $error-red; }
 
-// Blue
+%color__font-blue { color: $blue; }
 %color__font--link-blue { color: $link-blue; }
 
-// Brand color
 %color__font--facebook { color: $facebook; }
 %color__font--twitter { color: $twitter; }
 %color__font--google { color: $google; }
@@ -31,15 +26,20 @@
 
 // Background color extend
 
-// white
 %color__background--white { background-color: $white; }
 
-// blue
 %color__background--blue { background-color: $blue; }
 
-// Gray
+%color__background--done-green { background-color: $done-green; }
+
 %color__background--light-gray { background-color: $light-gray; }
 
+
+%color__background--facebook { background-color: $facebook; }
+%color__background--twitter { background-color: $twitter; }
+%color__background--google { background-color: $google; }
+%color__background--odesk { background-color: $odesk; }
+%color__background--elance { background-color: $elance; }
 
 // Grid
 %center{

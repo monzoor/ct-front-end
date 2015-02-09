@@ -1,0 +1,123 @@
+form {
+  @include stack(0);
+  width: 93%;
+  margin: 0;
+  >a{
+    font-size: 14px;
+    @include stack();
+  }
+}
+label{
+  font-size: 14px;
+  font-weight: 600;
+  @extend %color__font--black__opacity--Point8;
+  display: block;
+  cursor: inherit;
+}
+.input--text, 
+input[type=text],
+input[type=password],{
+  width: 100%;
+  outline: 0;
+  font-size: 14px;
+  border: 1px solid $semi-dark-gray;
+  background-clip: padding-box;
+  padding: 9px 12px;
+  @extend %color__background--white;
+  @extend %color__font--black;
+  @include border-top-radius(3px);
+  @include border-right-radius(3px);
+  @include border-bottom-radius(3px);
+  @include border-left-radius(3px); 
+  @include transition-property(background,border);
+  @include transition-duration(.3s);
+  @include placeholder {
+    color: $semi-dark-gray;
+    font-size: 14px;
+  }
+}
+
+// Checkbox and radio
+
+$primaryColor: $done-green;
+$secondaryColor: $semi-dark-gray;
+
+.label--checkbox,
+.label--radio {
+  position: relative;
+  cursor: pointer;
+}
+
+.checkbox {
+  position: relative;
+  margin: 0 12px 0 0 ;
+  cursor: pointer;
+  &:before {
+    @include transition(transform .4s cubic-bezier(.45,1.8,.5,.75));
+    @include transform(rotate(-45deg) scale(0, 0));
+    content: "";
+    position: absolute;
+    left: rem(3);
+    top: rem(2);
+    z-index: 1;
+    width: rem(12);
+    height: rem(6);
+    border: 1px solid $primaryColor; 
+    border-top-style: none;
+    border-right-style: none;
+  }
+  
+  &:checked {
+    &:before {
+      @include transform(rotate(-45deg) scale(1, 1));
+    } 
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: rem(-2);
+    left: 0;
+    width: 1rem;
+    height: 1rem;
+    background: #fff;
+    border: 1px solid $secondaryColor;
+    cursor: pointer;
+  }
+}
+
+.radio {
+  position: relative;
+  margin: 0 1rem 0 0 ;
+  cursor: pointer;
+  &:before {
+    @include transition(transform .4s cubic-bezier(.45,1.8,.5,.75));
+    @include transform(scale(0,0));
+    content: "";
+    position: absolute;
+    top: 0;
+    left: rem(2);
+    z-index: 1;
+    width: rem(12);
+    height: rem(12);
+    background: $primaryColor;
+    border-radius: 50%;
+  }
+  
+  &:checked {
+    &:before {
+     @include transform(scale(1,1)); 
+    }
+  }
+  
+  &:after {
+    content: "";
+    position: absolute;
+    top: rem(-4);
+    left: rem(-2);
+    width: 1rem;
+    height: 1rem;
+    background: #fff;
+    border: 2px solid $secondaryColor;
+    border-radius: 50%;
+  }
+}

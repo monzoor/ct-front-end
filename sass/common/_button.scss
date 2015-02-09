@@ -1,0 +1,65 @@
+// Button Reset
+button {
+	width: auto;
+	border: 0 none;
+	margin: 0;
+	padding: 0;
+	background: transparent;
+	overflow: visible;
+	vertical-align: middle;
+}
+
+button, .button {
+	font-size: 14px;
+	line-height: 24px;
+	color: #fff;
+	padding: 9px 18px;
+	font-weight: 700;
+	font-style: normal;
+	cursor: pointer;
+	text-align: center;
+	display: inline-block;
+	margin: 0;
+	@include border-top-radius(3px);
+	@include border-right-radius(3px);
+	@include border-bottom-radius(3px);
+	@include border-left-radius(3px);	
+	@include transition-property(background);
+	@include transition-duration(.3s);
+
+	// Color
+
+	&.facebook{
+		@extend %color__background--facebook;
+	}
+	&.twitter{
+		@extend %color__background--twitter;
+		i{ margin-left: -16px}
+	}
+	&.google{
+		@extend %color__background--google;
+		i{ margin-left: -8px}
+	}
+	&.blue{
+		@extend %color__background--blue;
+	}
+	&.green{
+		@extend %color__background--done-green 
+	}
+
+	// Width
+
+	&.width--full { width: 100%;}
+	&.width--half { width: 50%;}
+
+	// Extra padding
+
+	&.padding--66 { padding: 9px 66px; }
+	i{
+		height: 100%;
+		display: inline-block;
+		font-size: 17px;
+		vertical-align: middle;
+		margin-right: 10px;
+	}
+}

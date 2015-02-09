@@ -4,9 +4,11 @@ $base-line-height: 24px;
 
 h1{
 	@include adjust-font-size-to(42px);
+	@extend %color__font--black__opacity--Point8;
 }
 h2{
 	@include adjust-font-size-to(30px);
+	@extend %color__font--black__opacity--Point8;
 }
 h3{
 	@include adjust-font-size-to(24px);
@@ -19,6 +21,7 @@ h5{
 }
 h6{
 	@include adjust-font-size-to(16px);
+	@extend %color__font--black__opacity--Point5;
 }
 p{
 	@include adjust-font-size-to(14px);
@@ -30,3 +33,4 @@ p{
 blockquote {
 	@include adjust-font-size-to(26px);
 }
+

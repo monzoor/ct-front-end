@@ -4,8 +4,8 @@
  
 // Set your grid dimensions here
 $body-width: 960px;
-// $baseline: 6px;
-$baseline: 16px;
+$baseline: 6px;
+// $baseline: 16px;
 @mixin baseline-grid {
 	$columns: 16;
 	$column-color: rgba(200,0,0,.2);
@@ -28,5 +28,5 @@ $baseline: 16px;
  
 // Example call
 body {
-	@include baseline-grid;
+	// @include baseline-grid;
 }

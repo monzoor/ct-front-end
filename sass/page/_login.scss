@@ -12,3 +12,56 @@
   cf()
 */
 
+#login{
+  @include center(940px);
+  padding-top: 48px;
+}
+.login__container {
+  padding: 36px 0;
+  @include center(940px, 36px);
+  @extend %color__background--white;
+  margin-top: 48px;
+  .login__container--social{
+    @include column(5/12, $gutter: 0);
+  }
+  .login__container--separator--mannual{
+    @include column(7/12, $gutter: 0);
+    .login__container--separator {
+      @include column(3/12, $gutter: 0);
+      .login__container--separator--box {
+        position: relative;
+        width: 0px;
+        border-left: 1px solid $semi-dark-gray;  
+        margin: 0 auto;
+        min-height: 360px; 
+        span {
+          $size:50px;
+          width:$size; height:$size; 
+          position:absolute; 
+          bottom:100%; margin-bottom:-$size/2;
+          left:0%; margin-left:-26px;
+          top: 50%;
+          margin-top: -$size/2;
+          border-radius:100%;
+          background: $white;
+        }
+        span i {
+          $offset:4px;
+          border:1px solid $semi-dark-gray;  
+          position:absolute;
+          top:$offset; bottom:$offset;
+          left:$offset; right:$offset;
+          border-radius:100%;
+          text-align:center;
+          line-height:40px;
+          font-style:normal;
+          @extend %color__font--black__opacity--Point5;
+        }
+      }
+    }
+    .login__container--mannual {
+      @include column(9/12, $gutter: 0);
+      // background-color: yellow;
+    }
+  }
+}
