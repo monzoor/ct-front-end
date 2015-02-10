@@ -1,10 +1,10 @@
 form {
   @include stack(0);
-  width: 93%;
+  width: 100%;
   margin: 0;
   >a{
     font-size: 14px;
-    @include stack();
+    display: inline-block;
   }
 }
 label{
@@ -17,12 +17,13 @@ label{
 .input--text, 
 input[type=text],
 input[type=password],{
-  width: 100%;
+  width: 92%;
   outline: 0;
   font-size: 14px;
   border: 1px solid $semi-dark-gray;
   background-clip: padding-box;
-  padding: 9px 12px;
+  padding: 9px 4%;
+  position: relative;
   @extend %color__background--white;
   @extend %color__font--black;
   @include border-top-radius(3px);

@@ -24,8 +24,8 @@ button, .button {
 	@include border-right-radius(3px);
 	@include border-bottom-radius(3px);
 	@include border-left-radius(3px);	
-	// @include transition-property(background);
-	// @include transition-duration(.3s);
+	@include transition-property(background);
+	@include transition-duration(.3s);
 
 	// Color
 
@@ -70,46 +70,24 @@ button, .button {
 }
 .field i{
 	position: absolute;
-	right: 10px;
-	top:10px;
+	right: 0px;
+	top:12px;
 	display: none;
 }
 
-input, button, textarea{
+button{
 	position: relative;
 	-webkit-apprearance:none;
 	-moz-apprearance:none;
 	apprearance:none;
-	margin: 0;
-	padding:10px;
-	font-size: 14px;
-	margin-bottom: 10px;
-	width: 100%;
-	border:1px solid #C7C7C7;
-	background-color: #fafafa;
 	-webkit-transition:background-color .3s, border-color .4s;
 	-moz-transition:background-color .3s, border-color .4s;
 	-o-transition:background-color .3s, border-color .4s;
 	transition:background-color .3s, border-color .4s;
 }
-textarea{
-	height: 100px;
-	resize:none;
-}
 
-input:focus, textarea:focus, input:hover, textarea:hover{
-	outline:none;
-	border-color: #777;
-}
 button{
 	display: block;
-	border: none;
-	background-color: #666;
-	color: #fff;
-	position: relative;
-	height: 50px;
-	line-height: 50px;
-	padding: 0;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	transition: all 0.3s;
@@ -118,17 +96,19 @@ button{
 	transform-style: preserve-3d;
 	cursor: pointer;
 }
-button:hover{
-	background-color: #555;
-}
+
 button:before,
 button:after{
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	left: 0;
-	line-height: 50px;
+	line-height: 40px;
 	cursor: default;
+	@include border-top-radius(3px);
+	@include border-right-radius(3px);
+	@include border-bottom-radius(3px);
+	@include border-left-radius(3px);
 }
 
 /* --------------------------------------------------- */ 
@@ -137,8 +117,8 @@ button:after{
 button:after{
 	top:-100%;
 	content:attr(data-success);
-	background: #7aca7c;
-	color: #358337;
+	background: transparent;
+	color: transparent;
 	-webkit-transform-origin: 0% 100%;
 	-webkit-transform: rotateX(90deg);
 	-moz-transform-origin: 0% 100%;
@@ -191,7 +171,7 @@ button.submit-error  {
 /*	Validation Styles
 /* --------------------------------------------------- */ 
 .success{
-	background-color: #EAFFF8;
+	// background-color: #EAFFF8;
 }
 .success+i{
 	color: #1C9D39;
@@ -204,4 +184,14 @@ button.submit-error  {
 .error{
 	background-color: #FFF1FF;
 }
+}
+.test{
+	&:before{
+		z-index: 2;
+	}
+}
+.test2{
+	&:after{
+		z-index: 3;
+	}
 }
