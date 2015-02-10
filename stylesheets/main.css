@@ -228,12 +228,6 @@ button, .button {
   border-bottom-right-radius: 3px;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
-  -webkit-transition-property: background;
-  -moz-transition-property: background;
-  transition-property: background;
-  -webkit-transition-duration: 0.3s;
-  -moz-transition-duration: 0.3s;
-  transition-duration: 0.3s;
 }
 /* line 37, ../sass/common/_button.scss */
 button.twitter i, .button.twitter i {
@@ -262,6 +256,159 @@ button i, .button i {
   font-size: 17px;
   vertical-align: middle;
   margin-right: 10px;
+}
+
+/* line 66, ../sass/common/_button.scss */
+.login__container--mannual {
+  /* --------------------------------------------------- */
+  /*	Rolling button style compliments of CodDrops.com
+  /* --------------------------------------------------- */
+  /* --------------------------------------------------- */
+  /*	Validation Styles
+  /* --------------------------------------------------- */
+}
+/* line 68, ../sass/common/_button.scss */
+.login__container--mannual .field {
+  position: relative;
+}
+/* line 71, ../sass/common/_button.scss */
+.login__container--mannual .field i {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: none;
+}
+/* line 78, ../sass/common/_button.scss */
+.login__container--mannual input, .login__container--mannual button, .login__container--mannual textarea {
+  position: relative;
+  -webkit-apprearance: none;
+  -moz-apprearance: none;
+  apprearance: none;
+  margin: 0;
+  padding: 10px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  width: 100%;
+  border: 1px solid #C7C7C7;
+  background-color: #fafafa;
+  -webkit-transition: background-color .3s, border-color .4s;
+  -moz-transition: background-color .3s, border-color .4s;
+  -o-transition: background-color .3s, border-color .4s;
+  transition: background-color .3s, border-color .4s;
+}
+/* line 95, ../sass/common/_button.scss */
+.login__container--mannual textarea {
+  height: 100px;
+  resize: none;
+}
+/* line 100, ../sass/common/_button.scss */
+.login__container--mannual input:focus, .login__container--mannual textarea:focus, .login__container--mannual input:hover, .login__container--mannual textarea:hover {
+  outline: none;
+  border-color: #777;
+}
+/* line 104, ../sass/common/_button.scss */
+.login__container--mannual button {
+  display: block;
+  border: none;
+  background-color: #666;
+  color: #fff;
+  position: relative;
+  height: 50px;
+  line-height: 50px;
+  padding: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+/* line 121, ../sass/common/_button.scss */
+.login__container--mannual button:hover {
+  background-color: #555;
+}
+/* line 124, ../sass/common/_button.scss */
+.login__container--mannual button:before,
+.login__container--mannual button:after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  line-height: 50px;
+  cursor: default;
+}
+/* line 137, ../sass/common/_button.scss */
+.login__container--mannual button:after {
+  top: -100%;
+  content: attr(data-success);
+  background: #7aca7c;
+  color: #358337;
+  -webkit-transform-origin: 0% 100%;
+  -webkit-transform: rotateX(90deg);
+  -moz-transform-origin: 0% 100%;
+  -moz-transform: rotateX(90deg);
+  -ms-transform-origin: 0% 100%;
+  -ms-transform: rotateX(90deg);
+  transform-origin: 0% 100%;
+  transform: rotateX(90deg);
+}
+/* line 151, ../sass/common/_button.scss */
+.login__container--mannual button:before {
+  top: 100%;
+  background: #e96a6a;
+  color: #a33a3a;
+  content: attr(data-error);
+  -webkit-transform-origin: 0% 0%;
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform-origin: 0% 0%;
+  -moz-transform: rotateX(-90deg);
+  -ms-transform-origin: 0% 0%;
+  -ms-transform: rotateX(-90deg);
+  transform-origin: 0% 0%;
+  transform: rotateX(-90deg);
+}
+/* line 166, ../sass/common/_button.scss */
+.login__container--mannual button.submit-success {
+  background: #aaa;
+  -webkit-transform-origin: 50% 100%;
+  -webkit-transform: rotateX(-90deg) translateY(100%);
+  -moz-transform-origin: 50% 100%;
+  -moz-transform: rotateX(-90deg) translateY(100%);
+  -ms-transform-origin: 50% 100%;
+  -ms-transform: rotateX(-90deg) translateY(100%);
+  transform-origin: 50% 100%;
+  transform: rotateX(-90deg) translateY(100%);
+}
+/* line 178, ../sass/common/_button.scss */
+.login__container--mannual button.submit-error {
+  background: #aaa;
+  -webkit-transform-origin: 50% 0%;
+  -webkit-transform: rotateX(90deg) translateY(-100%);
+  -moz-transform-origin: 50% 0%;
+  -moz-transform: rotateX(90deg) translateY(-100%);
+  -ms-transform-origin: 50% 0%;
+  -ms-transform: rotateX(90deg) translateY(-100%);
+  transform-origin: 50% 0%;
+  transform: rotateX(90deg) translateY(-100%);
+}
+/* line 193, ../sass/common/_button.scss */
+.login__container--mannual .success {
+  background-color: #EAFFF8;
+}
+/* line 196, ../sass/common/_button.scss */
+.login__container--mannual .success + i {
+  color: #1C9D39;
+  display: block;
+}
+/* line 200, ../sass/common/_button.scss */
+.login__container--mannual .error + i {
+  color: #B82020;
+  display: block;
+}
+/* line 204, ../sass/common/_button.scss */
+.login__container--mannual .error {
+  background-color: #FFF1FF;
 }
 
 /* line 2, ../sass/common/_common.scss */
