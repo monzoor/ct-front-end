@@ -302,87 +302,87 @@ img {
   float: none;
 }
 
-/* line 25, ../sass/common/_common.scss */
+/* line 24, ../sass/common/_common.scss */
 .font__align--center {
   text-align: center;
 }
 
-/* line 26, ../sass/common/_common.scss */
+/* line 25, ../sass/common/_common.scss */
 .font__align--left {
   text-align: left;
 }
 
-/* line 27, ../sass/common/_common.scss */
+/* line 26, ../sass/common/_common.scss */
 .font__align--right {
   text-align: right;
 }
 
-/* line 30, ../sass/common/_common.scss */
+/* line 29, ../sass/common/_common.scss */
 .font__weight--200 {
   font-weight: 200;
 }
 
-/* line 31, ../sass/common/_common.scss */
+/* line 30, ../sass/common/_common.scss */
 .font__weight--400 {
   font-weight: 400;
 }
 
-/* line 32, ../sass/common/_common.scss */
+/* line 31, ../sass/common/_common.scss */
 .font__weight--600 {
   font-weight: 600;
 }
 
-/* line 33, ../sass/common/_common.scss */
+/* line 32, ../sass/common/_common.scss */
 .font__weight--700 {
   font-weight: 700;
 }
 
-/* line 36, ../sass/common/_common.scss */
+/* line 35, ../sass/common/_common.scss */
 .margin__bottom--0 {
   margin-bottom: 0px;
 }
 
-/* line 37, ../sass/common/_common.scss */
+/* line 36, ../sass/common/_common.scss */
 .margin__bottom--6 {
   margin-bottom: 6px;
 }
 
-/* line 38, ../sass/common/_common.scss */
+/* line 37, ../sass/common/_common.scss */
 .margin__bottom--12 {
   margin-bottom: 12px;
 }
 
-/* line 39, ../sass/common/_common.scss */
+/* line 38, ../sass/common/_common.scss */
 .margin__bottom--18 {
   margin-bottom: 18px;
 }
 
-/* line 40, ../sass/common/_common.scss */
+/* line 39, ../sass/common/_common.scss */
 .margin__bottom--24 {
   margin-bottom: 24px;
 }
 
-/* line 42, ../sass/common/_common.scss */
+/* line 41, ../sass/common/_common.scss */
 .margin__top--0 {
   margin-top: 0px;
 }
 
-/* line 43, ../sass/common/_common.scss */
+/* line 42, ../sass/common/_common.scss */
 .margin__top--6 {
   margin-top: 6px;
 }
 
-/* line 44, ../sass/common/_common.scss */
+/* line 43, ../sass/common/_common.scss */
 .margin__top--12 {
   margin-top: 12px;
 }
 
-/* line 45, ../sass/common/_common.scss */
+/* line 44, ../sass/common/_common.scss */
 .margin__top--18 {
   margin-top: 18px;
 }
 
-/* line 46, ../sass/common/_common.scss */
+/* line 45, ../sass/common/_common.scss */
 .margin__top--24 {
   margin-top: 24px;
 }
@@ -410,7 +410,7 @@ h6, .login__container .login__container--separator--mannual .login__container--s
 }
 
 /* line 17, ../sass/common/_extends.scss */
-* a {
+* a, .login__container .login__container--forgot--password .flip__board--trigger-forgot {
   color: #1976D2;
 }
 
@@ -794,51 +794,66 @@ i {
 }
 
 /* line 26, ../sass/common/_icon-font.scss */
+.icon-angle-left:before {
+  content: "\e60a";
+}
+
+/* line 30, ../sass/common/_icon-font.scss */
 .icon-caret-down:before {
   content: "\e601";
 }
 
-/* line 30, ../sass/common/_icon-font.scss */
+/* line 34, ../sass/common/_icon-font.scss */
 .icon-caret-up:before {
   content: "\e602";
 }
 
-/* line 34, ../sass/common/_icon-font.scss */
+/* line 38, ../sass/common/_icon-font.scss */
 .icon-alert:before {
   content: "\e603";
 }
 
-/* line 38, ../sass/common/_icon-font.scss */
+/* line 42, ../sass/common/_icon-font.scss */
 .icon-facebook:before {
   content: "\e604";
 }
 
-/* line 42, ../sass/common/_icon-font.scss */
+/* line 46, ../sass/common/_icon-font.scss */
 .icon-google:before {
   content: "\e605";
 }
 
-/* line 46, ../sass/common/_icon-font.scss */
+/* line 50, ../sass/common/_icon-font.scss */
 .icon-link:before {
   content: "\e606";
 }
 
-/* line 50, ../sass/common/_icon-font.scss */
+/* line 54, ../sass/common/_icon-font.scss */
 .icon-done:before {
   content: "\e607";
 }
 
-/* line 54, ../sass/common/_icon-font.scss */
+/* line 58, ../sass/common/_icon-font.scss */
 .icon-hamburger:before {
   content: "\e608";
 }
 
-/* line 58, ../sass/common/_icon-font.scss */
+/* line 62, ../sass/common/_icon-font.scss */
 .icon-twitter:before {
   content: "\e609";
 }
 
-/* line 62, ../sass/common/_icon-font.scss */
+/* line 66, ../sass/common/_icon-font.scss */
+.icon-ct:before {
+  content: "\e600";
+}
+
+/* line 72, ../sass/common/_icon-font.scss */
+.icon-twitter:before {
+  content: "\e609";
+}
+
+/* line 76, ../sass/common/_icon-font.scss */
 .icon-ct:before {
   content: "\e600";
 }
@@ -1133,4 +1148,69 @@ blockquote {
 /* line 58, ../sass/vendor/jeet/_grid.scss */
 .login__container .login__container--separator--mannual .login__container--mannual:last-child {
   margin-right: 0%;
+}
+/* line 67, ../sass/page/_login.scss */
+.login__container .login__container--forgot--password {
+  *zoom: 1;
+  width: auto;
+  max-width: 940px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 36px;
+  padding-right: 36px;
+  position: relative;
+}
+/* line 344, ../sass/vendor/jeet/_grid.scss */
+.login__container .login__container--forgot--password:before, .login__container .login__container--forgot--password:after {
+  content: '';
+  display: table;
+}
+/* line 349, ../sass/vendor/jeet/_grid.scss */
+.login__container .login__container--forgot--password:after {
+  clear: both;
+}
+/* line 69, ../sass/page/_login.scss */
+.login__container .login__container--forgot--password form {
+  width: 97%;
+}
+/* line 71, ../sass/page/_login.scss */
+.login__container .login__container--forgot--password .flip__board--trigger-forgot {
+  position: absolute;
+  right: 18px;
+  top: 12px;
+}
+/* line 76, ../sass/page/_login.scss */
+.login__container .login__container--forgot--password .flip__board--trigger-forgot i {
+  margin-top: 2px;
+}
+
+/* line 85, ../sass/page/_login.scss */
+.flip__board {
+  height: 360px;
+  position: relative;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+}
+/* line 90, ../sass/page/_login.scss */
+.flip__board .flip__board--front, .flip__board .flip__board--back {
+  width: 92%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+/* line 95, ../sass/page/_login.scss */
+.flip__board .flip__board--front {
+  z-index: 2;
+}
+/* line 98, ../sass/page/_login.scss */
+.flip__board .flip__board--back {
+  width: 100%;
+  left: 0;
+  transform: rotateY(180deg);
+}
+/* line 103, ../sass/page/_login.scss */
+.flip__board.flip__board--flip {
+  /* CSS to make element flip on click */
+  transform: rotateY(180deg);
 }

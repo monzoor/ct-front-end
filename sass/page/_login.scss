@@ -64,4 +64,45 @@
       // background-color: yellow;
     }
   }
+  .login__container--forgot--password {
+    @include center(940px, 36px);
+    form{ width: 97%;}
+    position: relative;
+    .flip__board--trigger-forgot{
+      position: absolute;
+      right: 18px;
+      top: 12px;
+      @extend %color__font--link-blue;
+      i{margin-top: 2px;}
+    }
+  }
 }
+
+
+$trans: 0.6s;
+$spinY: 180deg; 
+
+.flip__board {
+  height: 360px;
+  position: relative;
+  transition: $trans;
+  transform-style: preserve-3d;
+  .flip__board--front, .flip__board--back {
+    width: 92%;
+    position: absolute;
+    backface-visibility: hidden;
+  }
+  .flip__board--front {
+    z-index: 2;
+  } 
+  .flip__board--back {
+    width: 100%;
+    left: 0;
+    transform: rotateY( $spinY );
+  }
+  &.flip__board--flip { /* CSS to make element flip on click */
+    transform: rotateY( $spinY );
+  }
+}
+
+

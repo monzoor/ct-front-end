@@ -23,6 +23,10 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-angle-left:before {
+  content: "\e60a";
+}
+
 .icon-caret-down:before {
   content: "\e601";
 }
@@ -54,6 +58,16 @@ i {
 .icon-hamburger:before {
   content: "\e608";
 }
+
+.icon-twitter:before {
+  content: "\e609";
+}
+
+.icon-ct:before {
+  content: "\e600";
+}
+
+
 
 .icon-twitter:before {
   content: "\e609";

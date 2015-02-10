@@ -6,25 +6,6 @@
 	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
 </head>
 <body>
-	<header>
-		<div class="header--container">
-			<div class="nav__logo--container">
-				<a href=""><i class="icon-ct"></i></a>
-			</div>
-			<nav>
-				<ul> 
-					<li><a href="">Learning Center</a></li>
-					<li><a href="">Broadcasts</a></li>
-					<li><a href="">Company</a></li>
-					<li><a class="selected" href="">Login</a></li>
-				</ul>
-			</nav>
-		</div>
-	</header>
-	<section id="login">
-		<h1 class="font__align--center">Welcome</h2>
-		<h6 class="font__align--center">Log in by choosing one of the options below.</h6>
-
 		<div class="login__container flip__board">
 			<div class="flip__board--front">
 				<div class="login__container--social">
@@ -60,8 +41,20 @@
 					      		<input type="checkbox" class="checkbox">
 					         	Remenber me
 					     	</label>
-					     	<button  data-error="Oops!, Something is wrong" data-success='Success, message sent' class="green margin__top--18 padding--66 margin__bottom--12">Log in</button>
+					     	<button id="button" data-error="Oops!, Something is wrong" data-success='Success, message sent' class="green margin__top--18 padding--66 margin__bottom--12">Log in</button>
 					     	<a class="underline flip__board--trigger" href="">Forgot password?</a>
+						</form>
+						<form>
+							<div class="field">
+								<input id="name" type="text" placeholder="Name">
+								<i></i>
+							</div>
+							<div class="field">
+								<input  id='email' type="email" placeholder="Email">
+								<i></i>
+							</div>
+
+							<button data-error="Oops!, Something is wrong" data-success='Success, message sent' id="button">Submit</button>
 						</form>
 					</div>
 				</div>
@@ -78,7 +71,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+					
 	<script type="text/javascript" src="js/user.js"></script>
 </body>
 </html>
