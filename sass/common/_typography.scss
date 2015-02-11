@@ -25,10 +25,12 @@ h6{
 }
 p{
 	@include adjust-font-size-to(14px);
-	// @include rhythm(0,0, 0,1);
-	// @include leader(1);
-	@include trailer(1);
+	// @include trailer(1);
+	&.p--big--font {
+		@include adjust-font-size-to(18px);
+	}
 }
+
 %font__margin--TopBottom0 { @include adjust-font-size-to(14px); }
 blockquote {
 	@include adjust-font-size-to(26px);

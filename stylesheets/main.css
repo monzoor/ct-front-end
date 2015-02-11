@@ -1,7 +1,8 @@
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900);
 /* line 5, ../../../../../Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+h1,
+.profile__header--container .profile__header--bio--name, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -197,6 +198,38 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /**
  * Apply a clearfix to an element.
  */
+/* line 1, ../sass/common/_avatar.scss */
+.user-avatar {
+  border-top-left-radius: 200px;
+  border-top-right-radius: 200px;
+  border-top-right-radius: 200px;
+  border-bottom-right-radius: 200px;
+  border-bottom-left-radius: 200px;
+  border-bottom-right-radius: 200px;
+  border-top-left-radius: 200px;
+  border-bottom-left-radius: 200px;
+  overflow: hidden;
+  display: block;
+  width: 45px;
+  height: 45px;
+  position: relative;
+}
+/* line 11, ../sass/common/_avatar.scss */
+.user-avatar.large {
+  width: 120px;
+  height: 120px;
+}
+/* line 15, ../sass/common/_avatar.scss */
+.user-avatar.medium {
+  width: 75px;
+  height: 75px;
+}
+/* line 19, ../sass/common/_avatar.scss */
+.user-avatar.small {
+  width: 32px;
+  height: 32px;
+}
+
 /* line 2, ../sass/common/_button.scss */
 button {
   width: auto;
@@ -502,27 +535,32 @@ img {
   margin-bottom: 24px;
 }
 
-/* line 42, ../sass/common/_common.scss */
+/* line 41, ../sass/common/_common.scss */
+.margin__bottom--30 {
+  margin-bottom: 30px;
+}
+
+/* line 43, ../sass/common/_common.scss */
 .margin__top--0 {
   margin-top: 0px;
 }
 
-/* line 43, ../sass/common/_common.scss */
+/* line 44, ../sass/common/_common.scss */
 .margin__top--6 {
   margin-top: 6px;
 }
 
-/* line 44, ../sass/common/_common.scss */
+/* line 45, ../sass/common/_common.scss */
 .margin__top--12 {
   margin-top: 12px;
 }
 
-/* line 45, ../sass/common/_common.scss */
+/* line 46, ../sass/common/_common.scss */
 .margin__top--18 {
   margin-top: 18px;
 }
 
-/* line 46, ../sass/common/_common.scss */
+/* line 47, ../sass/common/_common.scss */
 .margin__top--24 {
   margin-top: 24px;
 }
@@ -535,17 +573,17 @@ input[type=password] {
 }
 
 /* line 5, ../sass/common/_extends.scss */
-label, h1, h2 {
+label, h1, .profile__header--container .profile__header--bio--name, h2, .profile__navigation--container a, .profile__info--boxes--info .label_name {
   color: rgba(0, 0, 0, 0.8);
 }
 
 /* line 6, ../sass/common/_extends.scss */
-h6, .login__container .login__container--separator--mannual .login__container--separator .login__container--separator--box span i {
+h6, .login__container .login__container--separator--mannual .login__container--separator .login__container--separator--box span i, .profile__navigation--container a:hover, .profile__info--boxes--info .info_block_value {
   color: rgba(0, 0, 0, 0.5);
 }
 
 /* line 8, ../sass/common/_extends.scss */
-.header--container .nav__logo--container .icon-ct, .header--container nav a {
+.header--container .nav__logo--container .icon-ct, .header--container nav a, .profile__header--container .profile__header--bio--name, .profile__header--container .profile__header--bio--short-descrption {
   color: #FFFFFF;
 }
 
@@ -558,7 +596,7 @@ h6, .login__container .login__container--separator--mannual .login__container--s
 /* line 29, ../sass/common/_extends.scss */
 .input--text,
 input[type=text],
-input[type=password], .login__container {
+input[type=password], .login__container, .profile__navigation, .profile__info .profile__info--boxes {
   background-color: #FFFFFF;
 }
 
@@ -1037,7 +1075,7 @@ html {
 }
 
 /* line 5, ../sass/common/_typography.scss */
-h1 {
+h1, .profile__header--container .profile__header--bio--name {
   font-size: 3em;
   line-height: 1.14286em;
 }
@@ -1076,16 +1114,20 @@ h6 {
 p {
   font-size: 1em;
   line-height: 1.71429em;
-  margin-bottom: 1.71429em;
+}
+/* line 29, ../sass/common/_typography.scss */
+p.p--big--font {
+  font-size: 1.28571em;
+  line-height: 1.33333em;
 }
 
-/* line 32, ../sass/common/_typography.scss */
+/* line 34, ../sass/common/_typography.scss */
 .header--container nav li {
   font-size: 1em;
   line-height: 1.71429em;
 }
 
-/* line 33, ../sass/common/_typography.scss */
+/* line 35, ../sass/common/_typography.scss */
 blockquote {
   font-size: 1.85714em;
   line-height: 1.84615em;
@@ -1341,4 +1383,237 @@ blockquote {
 .flip__board.flip__board--flip {
   /* CSS to make element flip on click */
   transform: rotateY(180deg);
+}
+
+/* line 3, ../sass/page/_profile.scss */
+.profile__header {
+  display: block;
+  clear: both;
+  float: none;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 270px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* line 265, ../sass/vendor/jeet/_grid.scss */
+.profile__header:first-child {
+  margin-left: auto;
+}
+/* line 269, ../sass/vendor/jeet/_grid.scss */
+.profile__header:last-child {
+  margin-right: auto;
+}
+
+/* line 10, ../sass/page/_profile.scss */
+.profile__header--container {
+  *zoom: 1;
+  width: auto;
+  max-width: 940px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 90px;
+}
+/* line 344, ../sass/vendor/jeet/_grid.scss */
+.profile__header--container:before, .profile__header--container:after {
+  content: '';
+  display: table;
+}
+/* line 349, ../sass/vendor/jeet/_grid.scss */
+.profile__header--container:after {
+  clear: both;
+}
+/* line 13, ../sass/page/_profile.scss */
+.profile__header--container .profile__header--avater {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 16.66667%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+/* line 344, ../sass/vendor/jeet/_grid.scss */
+.profile__header--container .profile__header--avater:before, .profile__header--container .profile__header--avater:after {
+  content: '';
+  display: table;
+}
+/* line 349, ../sass/vendor/jeet/_grid.scss */
+.profile__header--container .profile__header--avater:after {
+  clear: both;
+}
+/* line 58, ../sass/vendor/jeet/_grid.scss */
+.profile__header--container .profile__header--avater:last-child {
+  margin-right: 0%;
+}
+/* line 16, ../sass/page/_profile.scss */
+.profile__header--container .profile__header--bio {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 83.33333%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+/* line 344, ../sass/vendor/jeet/_grid.scss */
+.profile__header--container .profile__header--bio:before, .profile__header--container .profile__header--bio:after {
+  content: '';
+  display: table;
+}
+/* line 349, ../sass/vendor/jeet/_grid.scss */
+.profile__header--container .profile__header--bio:after {
+  clear: both;
+}
+/* line 58, ../sass/vendor/jeet/_grid.scss */
+.profile__header--container .profile__header--bio:last-child {
+  margin-right: 0%;
+}
+/* line 19, ../sass/page/_profile.scss */
+.profile__header--container .profile__header--bio--name {
+  font-weight: 700;
+}
+/* line 24, ../sass/page/_profile.scss */
+.profile__header--container .profile__header--bio--short-descrption {
+  line-height: 28px;
+}
+
+/* line 31, ../sass/page/_profile.scss */
+.profile__navigation {
+  display: block;
+  clear: both;
+  float: none;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 48px;
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2) ;
+  -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2) ;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2) ;
+}
+/* line 265, ../sass/vendor/jeet/_grid.scss */
+.profile__navigation:first-child {
+  margin-left: auto;
+}
+/* line 269, ../sass/vendor/jeet/_grid.scss */
+.profile__navigation:last-child {
+  margin-right: auto;
+}
+
+/* line 37, ../sass/page/_profile.scss */
+.profile__navigation--container {
+  *zoom: 1;
+  width: auto;
+  max-width: 940px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+/* line 344, ../sass/vendor/jeet/_grid.scss */
+.profile__navigation--container:before, .profile__navigation--container:after {
+  content: '';
+  display: table;
+}
+/* line 349, ../sass/vendor/jeet/_grid.scss */
+.profile__navigation--container:after {
+  clear: both;
+}
+/* line 39, ../sass/page/_profile.scss */
+.profile__navigation--container li {
+  display: inline-block;
+  margin-right: 30px;
+}
+/* line 43, ../sass/page/_profile.scss */
+.profile__navigation--container a {
+  display: block;
+  padding: 12px 12px 9px;
+}
+/* line 47, ../sass/page/_profile.scss */
+.profile__navigation--container a.selected {
+  border-bottom: 2px solid #FFC107;
+}
+
+/* line 58, ../sass/page/_profile.scss */
+.profile__info {
+  *zoom: 1;
+  width: auto;
+  max-width: 940px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 30px;
+  min-height: 700px;
+}
+/* line 344, ../sass/vendor/jeet/_grid.scss */
+.profile__info:before, .profile__info:after {
+  content: '';
+  display: table;
+}
+/* line 349, ../sass/vendor/jeet/_grid.scss */
+.profile__info:after {
+  clear: both;
+}
+/* line 62, ../sass/page/_profile.scss */
+.profile__info .profile__info--boxes {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 31.33333%;
+  margin-left: 0%;
+  margin-right: 3%;
+  min-height: 200px;
+  margin-bottom: 18px;
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1) ;
+  -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1) ;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1) ;
+}
+/* line 344, ../sass/vendor/jeet/_grid.scss */
+.profile__info .profile__info--boxes:before, .profile__info .profile__info--boxes:after {
+  content: '';
+  display: table;
+}
+/* line 349, ../sass/vendor/jeet/_grid.scss */
+.profile__info .profile__info--boxes:after {
+  clear: both;
+}
+/* line 50, ../sass/vendor/jeet/_grid.scss */
+.profile__info .profile__info--boxes:nth-of-type(3n) {
+  margin-right: 0%;
+  float: right;
+}
+/* line 54, ../sass/vendor/jeet/_grid.scss */
+.profile__info .profile__info--boxes:nth-of-type(3n + 1) {
+  clear: both;
+}
+
+/* line 71, ../sass/page/_profile.scss */
+.profile__info--boxes--info {
+  padding: 18px 24px;
+  width: 83%;
+}
+/* line 74, ../sass/page/_profile.scss */
+.profile__info--boxes--info .profile__info--block {
+  margin-bottom: 18px;
+}
+/* line 77, ../sass/page/_profile.scss */
+.profile__info--boxes--info h4 {
+  line-height: 20px;
+}
+/* line 83, ../sass/page/_profile.scss */
+.profile__info--boxes--info .info_block_value {
+  word-break: break-word;
+  margin-bottom: 12px;
 }

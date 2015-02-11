@@ -1,39 +1,10 @@
 @mixin font($type) {
   font-family: $type;
   font-style: normal;
+}
 
-  //Lato
-  // @if $type == 'lato-regular' {
-  //   font-family: $lato;
-  //   font-weight: 400;
-  //   font-style: normal;
-  // } 
- 
-  // @if $type == 'lato-light' {
-  //   font-family: $lato;
-  //   font-weight: 300;
-  //   font-style: normal;
-  // } 
-  // @if $type == 'lato-bold' {
-  //   font-family: $lato;
-  //   font-weight: 700;
-  //   font-style: normal;
-  // } 
-
-  // @if $type == 'grand' {
-  //   font-family: $grand-hotel;
-  //   font-weight: 400;
-  //   font-style: normal;
-  // } 
- 
-  // @if $type == 'eb' {
-  //   font-family: $eb;
-  //   font-weight: 400;
-  //   font-style: normal;
-  // } 
-  // @if $type == 'dancing' {
-  //   font-family: $dancing;
-  //   font-weight: 400;
-  //   font-style: normal;
-  // } 
+@mixin box-shadow($left:0, $top:2px, $blur:2px, $color:rgba(#000,.2), $inset:"") {
+  -webkit-box-shadow:$left $top $blur $color #{$inset};
+  -moz-box-shadow:$left $top $blur $color #{$inset};
+  box-shadow:$left $top $blur $color #{$inset};
 }

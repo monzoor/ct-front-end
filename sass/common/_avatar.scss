@@ -1,0 +1,23 @@
+.user-avatar {
+  @include border-top-radius(200px);
+  @include border-right-radius(200px);
+  @include border-bottom-radius(200px);
+  @include border-left-radius(200px);
+  overflow: hidden;
+  display: block;
+  width: 45px;
+  height: 45px;
+  position: relative;
+  &.large {
+    width: 120px;
+    height: 120px;
+  }
+  &.medium {
+    width: 75px;
+    height: 75px;
+  }
+  &.small {
+    width: 32px;
+    height: 32px;
+  }
+}
