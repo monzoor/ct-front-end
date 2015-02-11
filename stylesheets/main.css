@@ -276,19 +276,23 @@ button.twitter i, .button.twitter i {
 button.google i, .button.google i {
   margin-left: -8px;
 }
-/* line 52, ../sass/common/_button.scss */
+/* line 45, ../sass/common/_button.scss */
+button.linkedin i, .button.linkedin i {
+  margin-left: -8px;
+}
+/* line 56, ../sass/common/_button.scss */
 button.width--full, .button.width--full {
   width: 100%;
 }
-/* line 53, ../sass/common/_button.scss */
+/* line 57, ../sass/common/_button.scss */
 button.width--half, .button.width--half {
   width: 50%;
 }
-/* line 57, ../sass/common/_button.scss */
+/* line 61, ../sass/common/_button.scss */
 button.padding--66, .button.padding--66 {
   padding: 9px 66px;
 }
-/* line 58, ../sass/common/_button.scss */
+/* line 62, ../sass/common/_button.scss */
 button i, .button i {
   height: 100%;
   display: inline-block;
@@ -297,7 +301,7 @@ button i, .button i {
   margin-right: 10px;
 }
 
-/* line 66, ../sass/common/_button.scss */
+/* line 70, ../sass/common/_button.scss */
 .login__container--mannual {
   /* --------------------------------------------------- */
   /*	Rolling button style compliments of CodDrops.com
@@ -306,18 +310,18 @@ button i, .button i {
   /*	Validation Styles
   /* --------------------------------------------------- */
 }
-/* line 68, ../sass/common/_button.scss */
+/* line 72, ../sass/common/_button.scss */
 .login__container--mannual .field {
   position: relative;
 }
-/* line 71, ../sass/common/_button.scss */
+/* line 75, ../sass/common/_button.scss */
 .login__container--mannual .field i {
   position: absolute;
   right: 0px;
   top: 12px;
   display: none;
 }
-/* line 78, ../sass/common/_button.scss */
+/* line 82, ../sass/common/_button.scss */
 .login__container--mannual button {
   position: relative;
   -webkit-apprearance: none;
@@ -328,7 +332,7 @@ button i, .button i {
   -o-transition: background-color .3s, border-color .4s;
   transition: background-color .3s, border-color .4s;
 }
-/* line 89, ../sass/common/_button.scss */
+/* line 93, ../sass/common/_button.scss */
 .login__container--mannual button {
   display: block;
   -webkit-transition: all 0.3s;
@@ -339,7 +343,7 @@ button i, .button i {
   transform-style: preserve-3d;
   cursor: pointer;
 }
-/* line 100, ../sass/common/_button.scss */
+/* line 104, ../sass/common/_button.scss */
 .login__container--mannual button:before,
 .login__container--mannual button:after {
   position: absolute;
@@ -357,7 +361,7 @@ button i, .button i {
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
 }
-/* line 117, ../sass/common/_button.scss */
+/* line 121, ../sass/common/_button.scss */
 .login__container--mannual button:after {
   top: -100%;
   content: attr(data-success);
@@ -372,7 +376,7 @@ button i, .button i {
   transform-origin: 0% 100%;
   transform: rotateX(90deg);
 }
-/* line 131, ../sass/common/_button.scss */
+/* line 135, ../sass/common/_button.scss */
 .login__container--mannual button:before {
   top: 100%;
   background: #e96a6a;
@@ -387,7 +391,7 @@ button i, .button i {
   transform-origin: 0% 0%;
   transform: rotateX(-90deg);
 }
-/* line 146, ../sass/common/_button.scss */
+/* line 150, ../sass/common/_button.scss */
 .login__container--mannual button.submit-success {
   background: #aaa;
   -webkit-transform-origin: 50% 100%;
@@ -399,7 +403,7 @@ button i, .button i {
   transform-origin: 50% 100%;
   transform: rotateX(-90deg) translateY(100%);
 }
-/* line 158, ../sass/common/_button.scss */
+/* line 162, ../sass/common/_button.scss */
 .login__container--mannual button.submit-error {
   background: #aaa;
   -webkit-transform-origin: 50% 0%;
@@ -411,27 +415,27 @@ button i, .button i {
   transform-origin: 50% 0%;
   transform: rotateX(90deg) translateY(-100%);
 }
-/* line 176, ../sass/common/_button.scss */
+/* line 180, ../sass/common/_button.scss */
 .login__container--mannual .success + i {
   color: #1C9D39;
   display: block;
 }
-/* line 180, ../sass/common/_button.scss */
+/* line 184, ../sass/common/_button.scss */
 .login__container--mannual .error + i {
   color: #B82020;
   display: block;
 }
-/* line 184, ../sass/common/_button.scss */
+/* line 188, ../sass/common/_button.scss */
 .login__container--mannual .error {
   background-color: #FFF1FF;
 }
 
-/* line 189, ../sass/common/_button.scss */
+/* line 193, ../sass/common/_button.scss */
 .test:before {
   z-index: 2;
 }
 
-/* line 194, ../sass/common/_button.scss */
+/* line 198, ../sass/common/_button.scss */
 .test2:after {
   z-index: 3;
 }
@@ -626,6 +630,11 @@ button.twitter, .button.twitter {
 }
 
 /* line 40, ../sass/common/_extends.scss */
+button.linkedin, .button.linkedin {
+  background-color: #0077B5;
+}
+
+/* line 41, ../sass/common/_extends.scss */
 button.google, .button.google {
   background-color: #db4437;
 }
@@ -995,31 +1004,26 @@ i {
 }
 
 /* line 54, ../sass/common/_icon-font.scss */
+.icon-linkedin:before {
+  content: "\e60b";
+}
+
+/* line 58, ../sass/common/_icon-font.scss */
 .icon-done:before {
   content: "\e607";
 }
 
-/* line 58, ../sass/common/_icon-font.scss */
+/* line 62, ../sass/common/_icon-font.scss */
 .icon-hamburger:before {
   content: "\e608";
 }
 
-/* line 62, ../sass/common/_icon-font.scss */
-.icon-twitter:before {
-  content: "\e609";
-}
-
 /* line 66, ../sass/common/_icon-font.scss */
-.icon-ct:before {
-  content: "\e600";
-}
-
-/* line 72, ../sass/common/_icon-font.scss */
 .icon-twitter:before {
   content: "\e609";
 }
 
-/* line 76, ../sass/common/_icon-font.scss */
+/* line 70, ../sass/common/_icon-font.scss */
 .icon-ct:before {
   content: "\e600";
 }

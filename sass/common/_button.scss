@@ -40,6 +40,10 @@ button, .button {
 		@extend %color__background--google;
 		i{ margin-left: -8px}
 	}
+	&.linkedin{
+		@extend %color__background--linkedin;
+		i{ margin-left: -8px}
+	}
 	&.blue{
 		@extend %color__background--blue;
 	}
